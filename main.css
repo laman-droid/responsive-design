@@ -1,0 +1,213 @@
+/* Universal settings for all screen sizes */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 0;
+  margin: 1rem 0 0 1rem;
+}
+
+.tags li {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-right: 10px;
+  background-color: #c4c4c4;
+}
+
+.tag {
+  display: flex;
+  flex-direction: column;
+}
+
+.model-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  justify-content: space-between;
+}
+
+.model-card {
+  margin-right: 2%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.model-card img {
+  height: 15rem;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.model-card > p {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  .app {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  /* styling of the footer section on mobile, header on desktop */
+  /* first I used position:fixed, but later found a solution using grid */
+
+  header {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-area: footer;
+    bottom: 0;
+    justify-content: space-between;
+    background-color: cyan;
+    align-items: center;
+  }
+
+  .logo {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 24px;
+  }
+
+  .menu {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .menu li {
+    font-size: 1.8rem;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .search-but {
+    display: none;
+  }
+
+  /* styling of the individual tags section on the body of the app */
+  .tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  .main {
+    grid-area: main;
+    overflow: auto;
+  }
+
+  .model-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  .model-card {
+    width: 50%;
+    margin-right: 2rem;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .app {
+    display: grid;
+    grid-template-rows: 8.8rem 6rem auto 6.4rem;
+    row-gap: 3rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: repeat(11, auto-fit);
+  }
+
+  .logo {
+    grid-column: 1 / 2;
+  }
+
+  .tags {
+    display: flex;
+  }
+
+  .search-bar {
+    height: 4rem;
+    grid-column: 3 / span 3;
+  }
+
+  .search-but {
+    height: 4rem;
+    grid-column: 6 / 7;
+  }
+
+  .menu {
+    grid-column: 10 / 12;
+  }
+
+  .model-card {
+    padding: 4%;
+    background-color: #dedada;
+  }
+
+  .model-card > p {
+    font-size: 1.2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  footer {
+    display: grid;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+    /* Very short durations means JavaScript that relies on events still works */
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
