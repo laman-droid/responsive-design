@@ -6,11 +6,36 @@ html {
 
 body {
   margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: #373f41;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-family: Nunito;
+  font-size: 4rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #373f41;
+}
+
+.logo {
+  color: #cf40f9;
+  font-size: 3.1rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
 }
 
 .menu {
@@ -30,47 +55,77 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  overflow-x: scroll;
-  padding: 0;
-  margin: 1rem 0 0 1rem;
 }
 
 .tags li {
-  font-size: 1.8rem;
   flex-shrink: 0;
-  margin-right: 10px;
-  background-color: #c4c4c4;
+  /* margin-right: 10px; */
+  border: 0.03rem solid #cecece;
+  border-radius: 1.5rem;
+  padding: 0.6rem 1.6rem;
+  text-align: center;
+  margin: auto;
 }
 
 .tag {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.tag-title {
+  margin-bottom: 6.8rem;
+  font-size: 4.8rem;
+  text-align: center;
+  color: #031634;
+  letter-spacing: -0.02em;
 }
 
 .model-cards {
-  width: 100%;
   display: flex;
   flex-direction: row;
-  overflow: auto;
-  justify-content: space-between;
+  justify-content: start;
+  align-content: space-between;
+  gap: 2%;
 }
 
 .model-card {
-  margin-right: 2%;
-  flex-shrink: 0;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 2px #cecece;
+  border-radius: 10px;
+  flex: 0 0 30%;
+  /* max-width: 33%; */
   display: flex;
   flex-direction: column;
+  padding: 1.6rem 1% 4.2rem 1%;
+  max-height: 60rem;
+  align-content: space-between;
 }
 
 .model-card img {
-  height: 15rem;
-  min-width: 100%;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 60%;
+  flex: 0 0 60%;
   object-fit: cover;
+  /* object-position: center center; */
+  margin-bottom: 4.2rem;
 }
 
-.model-card > p {
-  font-size: 1.6rem;
+.mcard-title {
+  color: #031634;
+  padding-left: 2.6rem;
+  padding-right: 4.2rem;
+  margin-bottom: 2.6rem;
 }
+
+.model-card p {
+  font-size: 1.6rem;
+  padding-left: 2.6rem;
+  padding-right: 4.2rem;
+}
+
+/* settings for MOBILE screen */
 
 @media screen and (max-width: 1200px) {
   body {
@@ -119,12 +174,12 @@ li {
     font-size: 1.8rem;
   }
 
-  .search-bar {
+  .search {
     display: none;
   }
 
-  .search-but {
-    display: none;
+  .tags {
+    overflow-x: scroll;
   }
 
   /* styling of the individual tags section on the body of the app */
@@ -141,9 +196,16 @@ li {
     display: none;
   }
 
+  .model-cards {
+    overflow: auto;
+    justify-content: space-between;
+  }
+
   .model-card {
-    width: 50%;
-    margin-right: 2rem;
+    flex-basis: 50%;
+    /* margin-right: 2rem; */
+    /* margin-right: 2%; */
+    flex-shrink: 0;
   }
 
   footer {
@@ -151,51 +213,89 @@ li {
   }
 }
 
+/* DESKTOP settings */
+
 @media screen and (min-width: 1200px) {
   .app {
     display: grid;
-    grid-template-rows: 8.8rem 6rem auto 6.4rem;
-    row-gap: 3rem;
+    grid-template-rows: auto 6rem auto 6.4rem;
+    row-gap: 6.8rem;
+    column-gap: 2.6rem;
+    margin: 1.6rem 6.8rem;
   }
 
   header {
     display: grid;
-    grid-template-columns: repeat(11, auto-fit);
+    grid-template-columns: repeat(11, auto);
+    column-gap: 2.6rem;
+    align-items: center;
   }
 
   .logo {
     grid-column: 1 / 2;
+    width: 15rem;
+    line-height: 100%;
   }
 
   .tags {
     display: flex;
   }
 
-  .search-bar {
-    height: 4rem;
-    grid-column: 3 / span 3;
+  .search {
+    display: flex;
+    grid-column: 3 / 9;
+    border: 0.03rem solid #cecece;
+    border-radius: 10px;
   }
 
-  .search-but {
+  .search-bar {
+    box-sizing: content-box;
+    width: 100%;
     height: 4rem;
-    grid-column: 6 / 7;
+    border: none;
+    border-radius: 10px;
+    padding: 0 1.6rem;
+    color: #cecece;
+  }
+
+  .search-button {
+    display: none;
   }
 
   .menu {
     grid-column: 10 / 12;
   }
 
+  .tag {
+    /* margin: 10.1rem 0; */
+  }
+
+  .tag-title {
+    margin-bottom: 6.8rem;
+    font-family: "Nunito", sans-serif;
+    font-size: 4.8rem;
+    text-align: center;
+  }
+
+  .model-cards {
+    flex-wrap: wrap;
+    justify-content: start;
+    row-gap: 6.8rem;
+  }
+
   .model-card {
-    padding: 4%;
-    background-color: #dedada;
+    /* padding: 4%; */
+    /* background-color: #dedada; */
+    /* height: 60rem; */
+    /* min-width: 30%; */
   }
 
   .model-card > p {
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
-  .title {
-    font-size: 1.8rem;
+  .mcard-title {
+    /* font-size: 1.8rem; */
   }
 
   footer {

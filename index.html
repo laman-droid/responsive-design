@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/main.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<script src="https://use.fontawesome.com/836ee19c39.js"></script>
     <!-- Bootstrap CSS -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
 
@@ -14,9 +17,11 @@
   <body>
     <div class="app">
       <header class="container">
-        <h1 class="logo">Module Map</h1>
-        <input class="search-bar" type="search" id="site-search" name="q" aria-label="Search through site content">
-        <button class="search-but">Search</button>
+        <h3 class="logo">Mental Model Art</h3>
+        <div class="search">
+          <input class="search-bar" type="search" id="site-search" placeholder="What are you looking for?" name="q" aria-label="Search through site content">
+          <button type="submit" class="search-button" aria-label="Search button"><i class="fa fa-search"></i></button>
+        </div>
         <ul class="menu">
             <li>Home</li>
             <li>Map</li>
@@ -33,97 +38,98 @@
         <li>Market research</li>
         <li>Product Management</li>
         <li>Finance</li>
+        <li>UX</li>        
       </ul>
 
       <main class="main">
         <div class="tag">
-          <a href="tagdetail.html" target="_blank" rel="noopener noreferrer"><h1>Cognitive bias</h1></a>
+          <a href="tagdetail.html" target="_blank" rel="noopener noreferrer"><h1 class="tag-title">UX</h1></a>
+          <div class="model-cards">
+            <div class="model-card">
+              <img src="https://www.sketchappsources.com/resources/source-image/empathy-map-template-dopeux.png" alt="">
+              <h3 class = "mcard-title">Empathy Mapping</h3>
+              <p>Visualizing user attitudes and behaviors in an empathy map helps UX teams align on a deep understanding of end users. </p>
+            </div> <!-- model card -->
+            <div class="model-card">
+              <img src="https://media.nngroup.com/media/editor/2018/11/06/screen-shot-2018-11-06-at-122254-pm.png" alt="">
+              <h3 class = "mcard-title">Journey Mapping</h3>
+              <p>A journey map is a visualization of the process that a person goes through in order to accomplish a goal.</p>
+            </div> <!-- model card -->
+            <div class="model-card">
+              <img src="https://miro.medium.com/focal/1200/632/49/17/1*c6wJ_peW0Tr2baN-P2zmoA.png" alt="">
+              <h3 class = "mcard-title">Card Sorting</h3>
+              <p>The main goal of Card Sorting is to improve a website’s or an application’s Information Architecture, to help designing how the information is organized and labelled. </p>
+            </div> <!-- model card -->
+            <div class="model-card">
+              <img src="https://uxpressia.com/page-persona/img-persona-intro.svg" alt="">
+              <h3 class = "mcard-title">Personas</h3>
+              <p>Creating personas will help you to understand your users’ needs, experiences, behaviours and goals. </p>
+            </div> <!-- model card -->
+            <div class="model-card">
+              <img src="https://expertprogrammanagement.com/wp-content/uploads/2019/05/The-5-Whys.png" alt="">
+              <h3 class = "mcard-title">5 Whys</h3>
+              <p>The 5 Whys is a technique that can help you to find the root cause of a problem. </p>
+            </div> <!-- model card -->
+          </div> <!-- model-cards -->
+        </div> <!-- tag -->
+
+        <div class="tag">
+          <h1 class="tag-title">Cognitive bias</h1>
           <div class="model-cards">
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1157&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1516546453174-5e1098a4b4af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div> <!-- model card -->
+            <div class="model-card">
+              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
           </div> <!-- model-cards -->
         </div> <!-- tag -->
 
         <div class="tag">
-          <h1>Cognitive bias</h1>
+          <h1 class="tag-title">Cognitive bias</h1>
           <div class="model-cards">
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1157&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
             <div class="model-card">
               <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-          </div> <!-- model-cards -->
-        </div> <!-- tag -->
-
-        <div class="tag">
-          <h1>Cognitive bias</h1>
-          <div class="model-cards">
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1157&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            </div> <!-- model card -->
-            <div class="model-card">
-              <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80" alt="">
-              <h2 class = "title">Ad eos saepe lucilius</h2>
+              <h3 class = "mcard-title">Ad eos saepe lucilius</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             </div> <!-- model card -->
           </div> <!-- model-cards -->
@@ -131,7 +137,7 @@
       </main> <!-- main -->
 
       <footer>
-        Designed with love by Laman
+        Designed by Laman
       </footer>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
