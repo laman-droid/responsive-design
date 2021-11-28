@@ -11,16 +11,18 @@ body {
   font-size: 1.6rem;
 }
 
-h1,
-h2,
-h3,
-p {
+* {
   margin: 0;
   padding: 0;
 }
 
+h1 {
+  font-size: 4rem;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+}
+
 h3 {
-  font-family: Nunito;
   font-size: 4rem;
   line-height: 100%;
   letter-spacing: -0.02em;
@@ -29,13 +31,6 @@ h3 {
 a {
   text-decoration: none;
   color: #373f41;
-}
-
-.logo {
-  color: #cf40f9;
-  font-size: 3.1rem;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
 }
 
 .menu {
@@ -59,7 +54,6 @@ li {
 
 .tags li {
   flex-shrink: 0;
-  /* margin-right: 10px; */
   border: 0.03rem solid #cecece;
   border-radius: 1.5rem;
   padding: 0.6rem 1.6rem;
@@ -70,59 +64,38 @@ li {
 .tag {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10rem;
 }
 
 .tag-title {
-  margin-bottom: 6.8rem;
-  font-size: 4.8rem;
   text-align: center;
   color: #031634;
-  letter-spacing: -0.02em;
 }
 
 .model-cards {
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-content: space-between;
-  gap: 2%;
 }
 
 .model-card {
+  display: flex;
+  flex-direction: column;
   background: #ffffff;
   box-shadow: 0px 0px 4px 2px #cecece;
   border-radius: 10px;
-  flex: 0 0 30%;
-  /* max-width: 33%; */
-  display: flex;
-  flex-direction: column;
-  padding: 1.6rem 1% 4.2rem 1%;
-  max-height: 60rem;
-  align-content: space-between;
 }
 
 .model-card img {
   border-radius: 10px;
   max-width: 100%;
-  max-height: 60%;
-  flex: 0 0 60%;
   object-fit: cover;
-  /* object-position: center center; */
-  margin-bottom: 4.2rem;
 }
 
 .mcard-title {
   color: #031634;
-  padding-left: 2.6rem;
-  padding-right: 4.2rem;
-  margin-bottom: 2.6rem;
 }
 
 .model-card p {
   font-size: 1.6rem;
-  padding-left: 2.6rem;
-  padding-right: 4.2rem;
 }
 
 /* settings for MOBILE screen */
@@ -134,6 +107,9 @@ li {
 
   .app {
     height: 100vh;
+    column-gap: 1rem;
+    row-gap: 2.6rem;
+    margin: 1rem 1.6rem;
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-areas:
@@ -151,11 +127,32 @@ li {
     grid-area: footer;
     bottom: 0;
     justify-content: space-between;
-    background-color: cyan;
     align-items: center;
+    height: 6rem;
+    margin-top: -2.6rem;
+    padding-left: 1.6rem;
+    padding-left: 1.6rem;
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12),
+      0px 1px 3px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
   }
 
   .logo {
+    display: none;
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
@@ -182,14 +179,23 @@ li {
     overflow-x: scroll;
   }
 
-  /* styling of the individual tags section on the body of the app */
+  .tags li {
+    margin-right: 0.6rem;
+  }
+
   .tags::-webkit-scrollbar {
     display: none;
   }
 
+  /* styling of the individual tags section on the body of the app */
+
   .main {
     grid-area: main;
     overflow: auto;
+  }
+
+  .tag {
+    margin-bottom: 2.6rem;
   }
 
   .model-cards::-webkit-scrollbar {
@@ -201,11 +207,37 @@ li {
     justify-content: space-between;
   }
 
+  .tag-title {
+    margin-bottom: 1.6rem;
+    text-align: left;
+  }
+
   .model-card {
-    flex-basis: 50%;
-    /* margin-right: 2rem; */
-    /* margin-right: 2%; */
-    flex-shrink: 0;
+    flex: 0 0 70%;
+    max-height: 35rem;
+    padding: 1rem 0.6rem 1.6rem 0.6rem;
+    margin-right: 1.6rem;
+  }
+
+  .model-card img {
+    /* display: none; */
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 50%;
+    flex: 0 0 50%;
+    object-fit: cover;
+    margin-bottom: 1.6rem;
+  }
+
+  .mcard-title {
+    color: #031634;
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .model-card p {
+    font-size: 1.6rem;
+    text-overflow: ellipsis;
   }
 
   footer {
@@ -235,6 +267,10 @@ li {
     grid-column: 1 / 2;
     width: 15rem;
     line-height: 100%;
+    color: #cf40f9;
+    font-size: 3.1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
   }
 
   .tags {
@@ -267,7 +303,7 @@ li {
   }
 
   .tag {
-    /* margin: 10.1rem 0; */
+    margin-bottom: 10rem;
   }
 
   .tag-title {
@@ -281,21 +317,34 @@ li {
     flex-wrap: wrap;
     justify-content: start;
     row-gap: 6.8rem;
+    justify-content: start;
+    align-content: space-between;
+    column-gap: 2%;
   }
 
   .model-card {
-    /* padding: 4%; */
-    /* background-color: #dedada; */
-    /* height: 60rem; */
-    /* min-width: 30%; */
+    flex: 0 0 30%;
+    padding: 1.6rem 1% 4.2rem 1%;
+    max-height: 60rem;
+    align-content: space-between;
   }
 
-  .model-card > p {
-    /* font-size: 1.2rem; */
+  .model-card img {
+    max-height: 60%;
+    flex: 0 0 60%;
+    margin-bottom: 4.2rem;
   }
 
   .mcard-title {
-    /* font-size: 1.8rem; */
+    padding-left: 2.6rem;
+    padding-right: 4.2rem;
+    margin-bottom: 2.6rem;
+  }
+
+  .model-card > p {
+    padding-left: 2.6rem;
+    padding-right: 4.2rem;
+    text-overflow: ellipsis;
   }
 
   footer {
